@@ -1,0 +1,473 @@
+module Jogos where 
+
+import LI12324
+
+jogo1:: Jogo
+jogo1 = Jogo{
+        mapa = mapa1,
+        inimigos = [Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (-1.5,-0.5),
+                                direcao    = Oeste,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                },
+                    Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (5.5,-4.5),
+                                direcao    = Este,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                },
+                    Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (-4.5,3.5),
+                                direcao    = Este,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                }] ,
+        colecionaveis = [(Machado, (-2.5,-4.5)),(Cerveja,(8.5,-8.5)),(Cerveja,(-6.5,-4.5)),(Cerveja,(0.5,6.5)), (Estrela,(0.5,8.5))],
+        jogador = Personagem {velocidade = (0,0) ,
+                              tipo       = Jogador,
+                              posicao    = (0.5,-8.5),
+                              direcao    = Este,
+                              tamanho    = (1,1),
+                              emEscada   = False,
+                              ressalta   = False,
+                              vida       = 3,
+                              pontos     = 0,
+                              aplicaDano = (False,0)
+                              }
+}
+
+jogo2:: Jogo
+jogo2 = Jogo{
+        mapa = mapa2,
+        inimigos = [Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (-4.5,-5.5),
+                                direcao    = Oeste,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                },
+                    Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (4.5,-5.5),
+                                direcao    = Este,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                },
+                    Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (-3.5,-2.5),
+                                direcao    = Oeste,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                },
+                    Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (3.5,-2.5),
+                                direcao    = Este,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                },
+                    Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (-4.5,0.5),
+                                direcao    = Oeste,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                },
+                    Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (4.5,0.5),
+                                direcao    = Este,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                },
+                    Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (-8.5,3.5),
+                                direcao    = Este,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                },
+                    Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (8.5,3.5),
+                                direcao    = Oeste,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                },
+                    Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (0.5,3.5),
+                                direcao    = Oeste,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                }],
+        colecionaveis = [(Machado, (0.0,-2.5)),(Estrela,(0.0,8.5)),(Cerveja,(-9.5,-2.5)),(Cerveja,(9.5,-2.5)),(Cerveja,(5.5,6.5)),(Cerveja,(-5.5,6.5))],
+        jogador = Personagem {velocidade = (0,0) ,
+                              tipo       = Jogador,
+                              posicao    = (0.5,-8.5),
+                              direcao    = Este,
+                              tamanho    = (1,1),
+                              emEscada   = False,
+                              ressalta   = False,
+                              vida       = 3,
+                              pontos     = 0,
+                              aplicaDano = (False,0)
+                              }
+}
+
+jogo3:: Jogo
+jogo3 = Jogo{
+        mapa = mapa3,
+        inimigos = [Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (-8.5,4.5),
+                                direcao    = Este,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                },
+                    Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (-8.5,-5.5),
+                                direcao    = Este,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                },
+                    Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (-0.5,4.5),
+                                direcao    = Este,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                }],
+        colecionaveis = [(Machado, (3.5,8.5)),(Estrela,(-8.5,-3.5)),(Cerveja,(0.5,7.5)),(Cerveja,(9.5,2.5)),(Cerveja,(-4.5,-1.5))],
+        jogador = Personagem {velocidade = (0,0) ,
+                              tipo       = Jogador,
+                              posicao    = (-6.5,-8.5),
+                              direcao    = Este,
+                              tamanho    = (1,1),
+                              emEscada   = False,
+                              ressalta   = False,
+                              vida       = 3,
+                              pontos     = 0,
+                              aplicaDano = (False,0)
+                              }
+}
+
+jogo4:: Jogo
+jogo4 = Jogo{
+        mapa = mapa4,
+        inimigos = [Personagem {velocidade = (0.05,0),
+                                tipo       = MacacoMalvado,
+                                posicao    = (0.5,6.5),
+                                direcao    = Este,
+                                tamanho    = (3,3),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                },
+                    Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (-4.5,3.5),
+                                direcao    = Oeste,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                },
+                    Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (4.5,3.5),
+                                direcao    = Este,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                },
+                    Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (4.5,-8.5),
+                                direcao    = Este,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                },
+                    Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (4.5,-6.5),
+                                direcao    = Este,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                },
+                    Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (7.5,-3.5),
+                                direcao    = Este,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                },
+                    Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (5.5,0.5),
+                                direcao    = Este,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                },
+                    Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (-5.5,0.5),
+                                direcao    = Este,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                },
+                    Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (-5.5,7.5),
+                                direcao    = Este,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                },
+                    Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (0.5,3.5),
+                                direcao    = Oeste,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                },
+                    Personagem {velocidade = (0.05,0),
+                                tipo       = Fantasma,
+                                posicao    = (-0.5,3.5),
+                                direcao    = Este,
+                                tamanho    = (0.2,0.5),
+                                emEscada   = False,
+                                ressalta   = True,
+                                vida       = 1,
+                                pontos     = 0,
+                                aplicaDano = (True,0)
+                                }],
+        colecionaveis = [(Machado, (-4.5,7.5)),(Estrela,(0.0,6.5)),(Cerveja,(8.5,-8.5)),(Cerveja,(9.5,0.5)),(Cerveja,(0.0,-2.5))],
+        jogador = Personagem {velocidade = (0,0) ,
+                              tipo       = Jogador,
+                              posicao    = (-5.5,-6.5),
+                              direcao    = Este,
+                              tamanho    = (1,1),
+                              emEscada   = False,
+                              ressalta   = False,
+                              vida       = 3,
+                              pontos     = 0,
+                              aplicaDano = (False,0)
+                              }
+}
+
+
+
+
+------------------------------------ MAPAS ----------------------------------------
+mapa1::Mapa
+mapa1 = Mapa ((0.5,-8.5),Este) (0.5,8.5) (transform mapa1D)
+
+mapa1D :: [String]
+mapa1D = ["--------------------",
+          "                    ",
+          "   ---+------+---   ",
+          "      +      +      ",
+          "  +--------------+  ",
+          "  +              +  ",
+          "  +              +  ",
+          " -----+-____-+----- ",
+          "      +      +      ",
+          "      +      +      ",
+          "      +      +      ",
+          "    -------+----    ",
+          "           +        ",
+          "           +        ",
+          "           +        ",
+          "   -+------------   ",
+          "    +               ",
+          "    +               ",
+          "    +               ",
+          "--------------------"]
+
+mapa2::Mapa
+mapa2 = Mapa ((0.5,-8.5),Este) (0.5,8.5) (transform mapa2D)
+
+mapa2D :: [String]
+mapa2D = ["--------------------",
+          "                    ",
+          "        +--+        ",
+          "        +  +        ",
+          "-+- -  --  --  - -+-",
+          " +                + ",
+          " +                + ",
+          "---------++---------",
+          "         ++         ",
+          "         ++         ",
+          "-+-----  --  -----+-",
+          " +                + ",
+          " +                + ",
+          "-- --+--____--+-- --",
+          "     +        +     ",
+          "     +        +     ",
+          " -+----+-  -+----+- ",
+          "  +    +    +    +  ",
+          "  +    +    +    +  ",
+          "--------------------"]
+
+mapa3::Mapa
+mapa3 = Mapa ((-6.5,-8.5),Este) (0.5,8.5) (transform mapa3D)
+
+mapa3D :: [String]
+mapa3D = ["--------------------",
+          "                    ",
+          "             -      ",
+          "         ---        ",
+          "    ---+          +-",
+          "    - -+       -  + ",
+          "-+--- -------     + ",
+          " +                + ",
+          " +             +----",
+          " +             +    ",
+          "+-- -  ---     +    ",
+          "+      -       --   ",
+          "--------          +-",
+          "          --      + ",
+          "+-                + ",
+          "+       --       ---",
+          "--__---       --    ",
+          "          +--       ",
+          "          +         ",
+          "--------------------"]
+
+mapa4::Mapa
+mapa4 = Mapa ((-5.5,-6.5),Este) (0.5,8.5) (transform mapa4D)
+
+mapa4D :: [String]
+mapa4D = ["--------------------",
+          "      -             ",
+          "      -           -+",
+          "+------       - -  +",
+          "+       ----       +",
+          "+                  +",
+          "+                  +",
+          "---------+----------",
+          "         +          ",
+          "         +          ",
+          "+------  --  -------",
+          "+                   ",
+          "+                   ",
+          "+       -__-        ",
+          "----  -      - ---+-",
+          "                  + ",
+          "         --       + ",
+          "---+----    --------",
+          "-  +               -",
+          "--------------------"]
+
+
+
+transform:: [String] -> [[Bloco]]
+transform m = map (line) m 
+    where 
+        line :: String -> [Bloco]
+        line "" = []
+        line (h:t) |h == ' ' = Vazio : line t
+                   |h == '+' = Escada : line t
+                   |h == '-' = Plataforma : line t
+                   |h == '_' = Alcapao : line t
